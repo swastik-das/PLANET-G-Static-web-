@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>s
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / signup</title> 
+    <link rel="shortcut icon"  href="img/faveicon-01.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+      <style>
+body{
+background-color: #17202a;
+background-image: url('img/wp2866633-league-of-legends-wallpaper-1920x1080.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.back_2{
+height:460px;
+width:700px;
+background-color:black ;
+position: absolute;
+margin:40px 200px ;
+border-radius:4px;
+opacity:0.9;
+box-shadow:0px 0px 40px 0px black;
+}
+.all_in{
+position: relative;
+top:110px;
+left:200px;
+}
+input[type=text]{
+width:340px;
+height: 42px;
+border-radius:0px;
+border:3px solid tomato;
+background-color: black;
+transform: skew(-20deg);
+color: whitesmoke;
+box-shadow:0px 0px 10px 0px  tomato;
+border-radius:6px;
+}
+input[type=text]:focus{
+border-radius:0px;
+border:none;
+border-bottom:3px solid tomato;
+background-color: black;
+box-shadow:0px 0px 25px 0px  tomato;
+}
+input[type=text]::placeholder{
+padding-left:20px;
+font-size:14px;
+}
+input[type=password]{
+width:340px;
+height:42px;
+border-radius:0px;
+border:3px solid tomato;
+background-color:black;
+transform:skew(-20deg);
+position: absolute;
+left:-15px;
+color: whitesmoke;
+
+border-radius:6px;
+box-shadow:0px 0px 10px 0px  tomato;
+}
+input[type=password]:focus{
+border-radius:0px;
+border:none;
+border-bottom:3px solid tomato;
+box-shadow:0px 0px 30px 0px  tomato;
+background-color:black;
+}
+input[type=password]::placeholder{
+padding-left:20px;
+font-size:14px;
+}
+.log_in{
+position: absolute;
+top:140px;
+left:110px;
+border-radius:0px;
+border:3px solid tomato;
+background-color:black;
+transform:skew(-20deg);
+color:#808B96;
+height:40px;
+width:100px;
+border-radius:6px;
+box-shadow:0px 0px 10px 0px  tomato;
+font-weight:400;
+}
+.log_in:hover{
+   box-shadow:0px 0px 30px 0px  tomato;
+}
+span p a{
+color:#707B7C;
+font-weight: 600;
+font-size:10px;
+}
+.sec a{
+position: absolute;
+top:220px;
+color:white;
+text-decoration:none;
+left:20px;
+opacity:0.6;
+font-size:13px;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.google_c{
+height:47px;
+width:300px;
+background:none;
+position: absolute;
+top:260px;
+left:0px;
+color: white;
+border-radius:50px;
+border:3px solid white;
+}
+#callro{
+   height:140px;
+   width:300px;
+   background-color:#34495E;
+  
+   position: absolute;
+   top:460px;
+   left:-360px;
+ transition: 0.9s;
+}
+#sucess{
+height:600px;
+width:100%;
+background-color: black;
+box-shadow:-10px 10px 130px 10px black;
+position: absolute;
+display:none;
+}
+.rollr{
+   width:220px;
+   height:50px;
+   border-radius:40px;
+   position: relative;
+   left:600px;
+}
+   </style>
+<script>
+var user = [{username:"user_planetG.com",password:"#openG"},
+            {username :"swastik123@dudo.com",password:"open321"}
+         ];
+ function Login(){   
+ var UserName =  document.getElementById("txtName").value;
+ var Password= document.getElementById("txtPwd").value;
+ for (var userdetail of user){
+ if(userdetail.username==UserName ){
+ if(userdetail.password==Password){
+  document.getElementById("sucess").style.display="inline";
+ } else{    
+document.getElementById("track2").style.display="inline";
+document.getElementById("callro").style.left="40px";
+ break;
+ }
+ } else{
+document.getElementById("track1").style.display="inline";
+document.getElementById("callro").style.left="40px";
+ }
+} 
+  }
+function hide(){
+   document.getElementById("callro").style.left="-360px";
+}
+</script>
+</head>
+<body>
+
+<div class="container-fluid"> 
+<div class="container"> 
+    <div class="back_2">
+       <img src="img/GG-01.svg" height="150" width="150" style="position: absolute;left:260px;top:-40px;" alt="">
+       <img src="img/red G-01.svg" height="65" width="65" style="position: absolute;left:390px;top:15px;"  alt="">
+<div class="all_in"> 
+<input type="text" class="form-control" id="txtName" placeholder="Enter email" required>
+<span style="font-size:13px; color:white;position:absolute;top:9px;left:300px;"><i class="fas fa-user"></i></span>
+<br> 
+<input type="password" class="form-control" id="txtPwd" placeholder="Enter password" required>
+<span style="font-size:13px; color:white;position:absolute;top:75px;left:292px;"><i class="fas fa-key"></i></span>
+<br> 
+  <button type="submit" onclick="Login()" class="log_in">LOGIN</button>
+   </form>
+   <span style=" position: absolute; top:196px; font-size:14px;left:70px;"> 
+      <p> <a href="">Forget Password</a> &nbsp; <a href=""> Terms and Condition</a></p> 
+   </span> 
+   <p class="sec" >  
+      <a href=""> Don't Have Planet G account <font color="tomato" size="3"> Create Account</font>  </a>   
+   </p>
+<button class="btn btn-dark google_c">
+<span>Connect with Google <span> <img src="img/kisspng-google-logo-business-microsoft-windows-operating-system-5b5cb99edbaff2.0036729815328034868999.png" height="30" width="30" alt=""></span></span>
+</button>
+
+<div id="track1" style="display:none;"> 
+ <p style="font-size:10px;position:absolute; margin-left:20px; color:red; margin-top:-130px; font-weight:600;">incorrect Email (please enter valid email)</p>
+<div class="shape"> 
+</div>
+</div>
+
+<div  id="track2" style="display:none;"> 
+   <p style="font-size:10px;position:absolute; margin-left:20px; color:red; margin-top:-60px; font-weight:600;">incorrect Password(please enter correct Password)</p>
+</div>
+          </div>
+   </div> 
+</div>
+</div>  
+
+   
+<div id="callro"> 
+<span  id="close" onclick="hide()" style="position: absolute; left:259px; top:50px;cursor: pointer;font-size:30px; color:#7F8C8D;"> <i class="fas fa-chevron-circle-left"></i> </span>
+<p style="color:white; margin-left:20px;margin-top:20px;"><span style="font-weight:700;color: yellow;">HELLO' </span>to success the task enter</p>
+<p align="center">Email: user_planetG.com</p>
+<p align="center">Password: #openG</p>
+      </div>
+
+<div id="sucess"> 
+
+<img src="img/70a552e8e955049c8587b2d7606cd6a6.gif" alt="" style="position: relative; left:450px;top:50px; " height="350" width="500">
+ <p align="center" style="color: white; position: relative;">Login Successful</p>
+  <div> 
+     <br> 
+<a href="index.html"> <button class="btn btn-outline-warning rollr"> Back to Home </button></a>
+  </div>
+</div>
+
+</body>
+</html>

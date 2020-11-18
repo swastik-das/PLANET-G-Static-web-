@@ -1,0 +1,380 @@
+body{
+    margin:0px;
+    padding: 0px;
+    background-color: black;
+    background-image: url('img/cool-background.png');
+background-repeat:repeat;
+background-size: cover;
+   }
+   header{
+   height:350px;
+
+   }
+   .spark{
+   height: 460px;
+   }
+   .front{
+   filter:brightness(90%);
+   margin-left:-82px;
+   }
+   .front:hover{
+   filter:brightness(20%);
+   transition: 4.5s ease-in-out;
+   }
+   .d1{
+   margin-top:-180px;
+   }
+   .lasec{
+   height:400px;
+   width: 1268px;
+   background:none;
+   margin-left:82px;
+   margin-top:10px;
+   }
+   
+   .lasec2{
+   height:400px;
+   width: 1268px;
+   background-color:#17202a;
+   margin-left:80px;
+   margin-top:100px;
+   }
+   .lasec3{
+   height:400px;
+   width: 1268px;
+   background-color:#17202a;
+   margin-left:-0px;
+   margin-top:30px;
+   }
+   .lasec4{
+   height:400px;
+   width: 1268px;
+   background-color:#17202a;
+   margin-left:-0px;
+   margin-top:30px;
+   }
+   .all{
+   margin-top: 100px;
+   margin-left:90px;
+   width:1100px;
+   }
+   .btn-outline-warning{
+     margin-left: 20px;
+   }
+   
+   .card:hover{
+   transform:scale(1.1);
+   transition: 0.9s;
+   box-shadow: 0.2px 0.2px 3px 0.2px #FFD700;
+   }
+   .f2{
+   margin-top:-100px;
+   }
+   .role{
+   margin-left: 100px;
+   margin-top:-160px;
+   color:white;
+   }
+   .role1{
+   margin-left: 600px;
+   margin-top:-160px;
+   color:white;
+   }
+   .b3{
+   height:40px;
+   width:160px;
+   background-color: orange;
+   color: white;
+   border: none;
+   border-radius: 4px ;
+   }
+   
+   .b3:hover{
+   background-color:  #d35400 ;
+   }
+   .i1{
+   margin-left:735px;
+   margin-top:-400px;
+   }
+   .i2{
+   margin-left:0px;
+   margin-top:-400px;
+   }
+   
+   .xbox{
+   height:400px;
+   width:1399px;
+   background-color:black;
+   margin-top:30px;
+   margin-left:-80px;
+   }
+   .t1{
+   margin-left:150px;
+   margin-top: 100px;
+   }
+   .dev{
+     filter: grayscale(100%);
+   }
+   .dev:hover{
+   transform:scale(1.6);
+   transition: 0.6s;
+   filter: grayscale(0%);
+   cursor: pointer;
+   }
+   .spark2{
+    background-color:black ;
+    height:500px;
+    padding:47px;
+    width: 1399px;
+    margin-left:-78px;
+    }
+    .spark3{
+        background-color:;
+        height:310px;
+        width: 1400px;
+        margin-left:-78px;
+        }
+.all-ca{
+position: relative;
+margin-left:200px;
+top:30px;
+}
+.dop {
+color: #5D6D7E ;
+font-size: 20px;
+}
+.carousel-item{
+  height:490px;
+}
+.frame-left{
+position: relative;
+left:-80px;
+}
+.frame-left2{
+  position: relative;
+  left:-80px;
+  }
+  .info{
+  height:200px;
+  width:40px;
+  background-color:red;
+  position:absolute;
+  margin-left:-80px;
+  z-index:1000;
+  top:730px;
+  border-radius:0px 15px 15px 0px;
+  
+   }    
+.trending{
+color:white;
+font-size:24px;
+transform: rotate(270deg);
+position: relative;
+top:120px;
+font-weight: 600;
+letter-spacing:1px;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .device{
+    color:white;
+    font-size:24px;
+    transform: rotate(270deg);
+    position: relative;
+    top:100px;
+    font-weight: 600;
+    letter-spacing:1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+.capp{
+   position:relative;
+   top:-180px;
+   font-size:30px;
+   margin-left:70px;
+   color:white;
+   font-weight: 500;
+   cursor: pointer;
+   transition:0.6 ease-in-out;
+ 
+}
+.soo{
+  filter:brightness(12%);
+  cursor: pointer;
+}
+.soo:hover{
+filter: brightness(80%);
+box-shadow:white;
+}
+.logoin{
+position: relative;
+top: -670px;
+margin-left:680px;
+}
+.info1{
+margin-left:-30px;
+color:whitesmoke;
+opacity:0.2;
+}
+.input-mail{
+  margin-left:280px;
+  top:-130px;
+ position:relative;
+}
+.s12{
+height:35px;
+width:100px;
+border: none;
+background-color: goldenrod;
+color: whitesmoke;
+border-radius:5px;
+position: relative;
+left: -20px;
+}
+.social{
+margin-left:130px;
+position: relative;
+top:60px;
+cursor: pointer;
+}
+.carousel_item{
+height:120px;
+width:30px;
+background-color:black;
+padding:20px;
+opacity:0px;
+font-size: 30px;
+padding:30px;
+position: absolute;
+left:-10px;
+text-align: center;
+top:160px;
+border-radius:0px 10px 10px 0px ;
+}
+.fs{
+color: chocolate;
+position: relative;
+top:6px;
+left:-5px;
+}
+.carousel_item2{
+  height:120px;
+  width:30px;
+  background-color:black;
+  padding:20px;
+  opacity:0px;
+  font-size:30px;
+  padding:30px;
+  position: absolute;
+  text-align: center;
+  top:160px;
+  left:150px;
+  border-radius:10px 0px 0px 10px;
+}
+.fs_2{
+  color: #d2691e;
+  position: relative;
+  top:6px;
+  left:-5px;
+  }
+.nav{
+  height:55px;
+  width:100%;
+  background-color:#212F3D;
+  position: fixed;
+  z-index:10000;
+}
+.txt_hop{
+color:#AEB6BF;
+font-size:14px;
+cursor: pointer;
+text-decoration: none;
+}
+#dev a{
+  color:#AEB6BF ;
+}
+#dev a:hover{
+  text-decoration: none;
+  font-size: 16px;
+  transition:0.3s;
+ background-color:none;
+ padding: 8px;
+ border-left: 3px solid white;
+ border-radius:30px;
+}
+#dol a{
+  position: absolute;
+ color: goldenrod;
+
+}
+.container{
+position:fixed;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: 600;
+left:220px;
+top:14px;
+}
+#sr1{
+position: relative;
+top:-4px;
+height:35px;
+border-radius:20px 0px 0px 20px ;
+background: none;
+color:white;
+border:1px solid white;
+}
+.alret{
+height:500px;
+width:700px;
+background-color:#17202A;
+position: fixed;
+top:80px;
+left:340px;
+z-index: 1000;
+display:none;
+border-radius:20px;
+}
+.machanic{
+position: absolute;
+left:205px;
+top:10px;
+animation:Frames infinite 8s linear ;
+}
+.al_info{
+position:absolute;
+top:260px;
+left:200px;
+}
+.pri{
+position:absolute;
+left:990px;
+top:-5px;
+}
+.btn_ex{
+position: absolute;
+top:397px;
+left:260px;
+color:grey;
+height:50px;
+width:200px;
+border-radius:30px;
+}
+body::-webkit-scrollbar{
+  width:12px;
+}
+body::-webkit-scrollbar-track{
+ background-color:#212F3D;
+}
+body::-webkit-scrollbar-thumb{
+ background:none;
+ border-radius:20px;
+ border:2px solid whitesmoke;
+ height:10px;
+}
+@keyframes Frames{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <title>Document</title>
+    <link rel="shortcut icon"  href="img/faveicon-01.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+<style>
+body{
+background-color:black ;
+}
+body::-webkit-scrollbar{
+  width:12px;
+}
+body::-webkit-scrollbar-track{
+ background-color:#212F3D;
+}
+body::-webkit-scrollbar-thumb{
+ background:none;
+ border-radius:20px;
+ border:2px solid whitesmoke;
+ height:10px;
+}
+
+.bar{
+height:60px;
+width:100%;
+background-color:#212F3D;
+position: fixed;
+z-index: 1000;
+}
+.car_sol{
+position: absolute;
+width:100%;
+height:200px;
+top: 60px;
+}
+main{
+height:400px;
+width:1400px;
+overflow: hidden;
+position:absolute;
+background:none;
+top:400px;
+background: none;
+left:-130px;
+ }
+ span{
+position: absolute;
+top:40%;
+font-size: 60px;
+font-weight: bold;
+color:tomato;
+cursor: pointer;
+left: 5%;
+z-index:1000;
+background-color:#D0D3D4 ;
+padding: 10px;
+border-radius: 50px 50px 50px 50px;
+height:100px;
+box-shadow:0px 0px 30px 0px black;
+ }
+ span:nth-of-type(2){
+    left: 94%;
+    text-align:right;
+}
+section{
+width:98%;
+height:400px;
+background-color:black;
+display: flex;
+margin: 10px auto;
+justify-content:left;
+overflow-x: auto;
+}
+section::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.sector{
+     min-width:330px;
+     height:370px;
+     position: relative;
+     background-color:#DC7633 ;
+     font-size:30px;
+     color: white;
+     margin: 10px 20px;
+     left: 0px;
+     text-align: center;
+     padding-top:70px;
+     transition: 0.5s;
+     border-radius:7px;
+             }
+.img_ape{
+    min-width:330px;
+     height:200px;
+     position: relative;
+     top:-70px;
+}
+.coin_info{
+height:140px;
+width: 330px ;
+position: relative;
+background-color:#17202A ;
+top:-70px;
+border-radius:0px 0px 7px 7px;
+}
+.all_co{
+position: relative;
+top: 6px;
+}
+.buy{
+width:130px;
+position: relative;
+left:-16px;
+background-color:#CB4335 ;
+color:whitesmoke;
+border:none;
+font-weight:600;
+}
+.buy:hover{
+box-shadow:0px 0px 20px 0px #E74C3C ;
+color:#2C3E50 ;
+}
+.coin_collc{
+height:50px;
+width:180px;
+background-color:#17202A;
+position: relative;
+left:1200px;
+top:5px;
+border-radius:50px;
+}
+.px_button{
+height:40px;
+width:40px;
+background-color: #34495E;
+position: relative;
+border: none;
+border-radius:90px;
+left:135px;
+top:5px;
+box-shadow:0px 0px 20px 0px black;
+}
+.add_coin{
+position: absolute;
+}
+.gg{
+margin-left:-40px;
+}    
+.vvg{
+height:300px;
+width:700px;
+background-color:#000000;
+position: fixed;
+top:160px;
+left:390px;
+z-index: 1000;
+box-shadow:0px 0px  30px 0px black;
+border-radius: 3px;
+display: none;
+}
+.fact{
+position: absolute;
+left:120px;
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+
+var span2=$("#span2");
+var span1=$("#span1");
+var div=$(".sector");
+ var l=0;
+ span2.click(function(){
+ l++;
+ for(var i of div){
+    if(l==0){i.style.left="0px";}
+    if(l==1){i.style.left="-740px";}
+    if(l==2){i.style.left="-1480px";}
+    if(l==3){i.style.left="-2220px"}
+    if(l==4){i.style.left="-2960px";}
+    if(l>4){l=4;}
+ }
+ });
+ span1.click(function(){
+ l--;
+ for(var i of div){
+    if(l==0){i.style.left="0px";}
+    if(l==1){i.style.left="-740px";}
+    if(l==2){i.style.left="-1480px";}
+    if(l==3){i.style.left="-2220px"}
+    if(l==4){i.style.left="-2960px";}
+    if(l<0){l=0;}
+ }
+ });
+
+$(".buy").click(function(){
+$(".vvg").css('display','inline');
+});
+$(".fas").click(function(){
+    $(".vvg").css('display','none');
+});
+});
+</script>
+</head>
+<body>
+              <div class="bar"> 
+     <p  style="position: absolute; font-size:20px;background: none;top:15px;
+     left:600px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+      ;font-weight:600;color:#D35400;">APEX <font color="white">COIN</font><sup><font size="1" color="#D35400;">TM</font></sup></p>
+
+      <img src="img/GG-01.svg" alt="Planet pnf" height="150" width="150" style="position: absolute;
+      top:-50px; left:20px;" >
+       <a href="index.html">
+      <img src="img/g logo 2-01.svg"  alt=""   height="100" width="100" style="position: absolute;
+         top:-20px; left:150px;">
+         </a>
+
+ <div class="coin_collc"> 
+<button class="btn px_button"><div style="color:#D35400;"> <i class="fas fa-plus"></i> </div></button>
+<p style="position: absolute; top:0px;left:50px; color: #D35400;;font-size:30px;font-weight:600;">5</p>
+<img src="img/PngItem_4816583.png" style="position: absolute;top:10px ; left:80px;" height="30" width="30" alt="">
+</div>
+
+
+              </div>
+
+<div class="container-fluid"> 
+ <div class="fact"> 
+     <div> 
+<a href="img_ape"><img style="position: absolute; top:50px; left:-135px;" src="img/190320-apex-icd-hken.jpg" height="350" width="1410" alt=""></a>
+</div>
+
+<main>
+<span id="span1" >&#139;</span>
+<span id="span2">&#155;</span>
+<section>
+<div class="sector">
+<div class="rog"> 
+<img class="img_ape" src="img/The_15th_anniversary_of_the_StarCraft_series_theme_HD_wallpaper_01 Wallpaper_1280x800[10wallpaper.com] - Copy.jpg"  alt="">
+</div>
+
+    <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">50</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 500  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">100</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1000  BUY </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/2018_Fortnite_Season_5_Latest_Game_HD_Poster Wallpaper_1280x720[10wallpaper.com].jpg" width="300"  alt="">
+        
+</div>
+
+<p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Frotninte </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">40</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 600  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">80</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1200  BUY </button>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Xenoblade_Chronicles_2_Game_2017_HD Wallpaper_1280x720[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Xenoblade Chronicles 2 </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">80</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 800  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">160</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1600  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+</div>
+<div class="sector">  
+    <div class="rog"> 
+        <img class="img_ape" src="img/Rise_of_the_Tomb_Raider_2015_HD_Game_Wallpaper_01 Wallpaper_1280x960[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Rise of the Tomb Raider </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">50</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 500  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">100</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1000  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/2018_Assassins_Creed_Odyssey_4K_Screenshot Wallpaper_1280x720[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Assassins Creed Odyssey </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">50</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 500  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">100</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1000  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+
+
+
+
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Pokemon_Go-2017_Game_Poster_Wallpaper Wallpaper_1280x960[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">50</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 500  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">100</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1000  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Injustice_Gods_Among_Us_2_HD_Game_Wallpaper Wallpaper_1280x960[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">50</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 500  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">100</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1000  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Halo_5_Guardian_Game_HD_Widescreen_Wallpaper Wallpaper_1280x960[10wallpaper.com].jpg" width="300"  alt="">  
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">50</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 500  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">100</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1000  BUY </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>
+
+
+</div>
+<div class="sector">
+
+    <div class="rog"> 
+        <img class="img_ape" src="img/DOTA_2_Game_HD_desktop_wallpaper Wallpaper_1280x800[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+        <div class="coin_info"> 
+             <div class="all_co"> 
+        <div class="row"> 
+        <div class="col-md-3"> 
+            <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+        
+        </div>
+        
+        <div class="col-md-2"> 
+        <p style="font-size:34px;">50</p>
+        </div>
+        <div class="col-md-2"> 
+          <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+        </div>
+        <div class="col-md-4"> 
+        <button class="btn buy"> &#8377; 500  BUY </button>
+        </div>
+        </div>
+        <div class="row"> 
+            <div class="col-md-3"> 
+                <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+            
+            </div>
+            <div class="col-md-2"> 
+                <p style="font-size:34px;">100</p>
+                </div>
+            <div class="col-md-2"> 
+              <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+            </div>
+            <div class="col-md-4"> 
+                <button class="btn buy">  &#8377; 1000  BUY </button>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        
+        </div>
+
+
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Destiny_2014_Game_HD_Desktop_Wallpaper Wallpaper_1280x800[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">50</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 500  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">100</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1000  BUY </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<div class="sector">
+
+    <div class="rog"> 
+        <img class="img_ape" src="img/Medal_Of_Honor_WarFighter_Game_HD_Wallpaper_09 Wallpaper_1280x800[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">50</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 500  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">100</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1000  BUY </button>
+        </div>
+
+    </div>
+</div>
+
+
+
+</div>
+</div>
+<div class="sector">
+    <div class="rog"> 
+        <img class="img_ape" src="img/Need_for_Speed-Shift_2_Game_HD_Wallpaper Wallpaper_1280x800[10wallpaper.com].jpg" width="300"  alt="">
+        </div>
+        <p align="center" style="position:relative;top:-63px;font-size:17px;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" > Star Craft </p>
+<div class="coin_info"> 
+     <div class="all_co"> 
+<div class="row"> 
+<div class="col-md-3"> 
+    <div style="font-size:10px;color:goldenrod;"> SEASON PASS PRIMIUM</div>
+
+</div>
+
+<div class="col-md-2"> 
+<p style="font-size:34px;">50</p>
+</div>
+<div class="col-md-2"> 
+  <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+</div>
+<div class="col-md-4"> 
+<button class="btn buy"> &#8377; 500  BUY </button>
+</div>
+</div>
+<div class="row"> 
+    <div class="col-md-3"> 
+        <div style="font-size:10px;color:#3498DB ;"> SEASON PASS ULTRAMAX</div>
+    
+    </div>
+    <div class="col-md-2"> 
+        <p style="font-size:34px;">100</p>
+        </div>
+    <div class="col-md-2"> 
+      <img src="img/PngItem_4816583.png" height="30" width="30"alt="">
+    </div>
+    <div class="col-md-4"> 
+        <button class="btn buy">  &#8377; 1000  BUY </button>
+        </div>
+    </div>                       
+</div>                       
+</div>
+</div>                                    
+</section>                                 
+</main>
+<div class="vvg"> 
+    
+ <img src="img/9f33d89e5dcfdac77535a6090bf62d8f.gif" height="300" width="300" style="position: relative; 
+ left: 160px;top:00px;" alt="">\
+ <div style="height:300px; width:200px;background-color:black;position: absolute; top:0px; "> 
+ </div>
+ <div style="height:300px; width:100px;background-color:black;position: absolute; top:0px; left:400px; "> 
+</div>
+<h1  style="color: white;position: absolute;top:190px;left:100px;font-size:20px;" > 
+Sorry' this facility under maintenance i'll be back soon ...  
+</h1>
+ <div style="position: absolute; left:630px;top:20px;font-size:30px;color: red;cursor: pointer;z-index: 1000;"> 
+    <i class="fas fa-times-circle"></i>
+ </div>
+
+</div>
+</div>
+</div>
+</body>
+</html>
